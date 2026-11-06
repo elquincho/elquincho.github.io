@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta property="og:title" content="El Quincho · Invitación"><meta property="og:description" content="Tu entrada con código QR">
+<meta property="og:image" content="https://elquincho.github.io/entrada/preview-entrada.jpg"><meta property="og:url" content="https://elquincho.github.io/entrada/"><meta name="theme-color" content="#0c0c0c">
+<link rel="icon" href="../logo.png">
+<style>body{margin:0}[hidden]{display:none!important}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
+<title>El Quincho · Invitación</title>
+</head><body>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap">
+<style>
+/* Layout: one ticket on a phone screen — the real logo over the venue photo, guest name, a white QR plate and the entry code. Single dark look on purpose, matching El Quincho's printed menu. */
+:root{--bg:#0c0c0c;--fg:#f6f4f1;--muted:#a59f98;--accent:#d6955a;--line:#2c2a28;
+  --f-body:"Open Sans",ui-sans-serif,system-ui,sans-serif;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:16px;line-height:1.4}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+#bg{position:fixed;inset:0;z-index:-1;background:linear-gradient(rgba(12,12,12,.5),rgba(12,12,12,.9) 50%),url(../fondo.jpg) center top/cover no-repeat}
+.wrap{max-width:460px;margin:0 auto;padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px))}
+header{text-align:center;padding-block:40px 18px}
+.logo{margin:0}.logo img{display:block;margin:0 auto;height:auto;width:min(300px,78%)}
+.place{margin-top:12px;font-size:12px;letter-spacing:.5em;text-transform:uppercase;padding-left:.5em}
+.tk{display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px;padding-block:14px 44px}
+.lbl{font-size:12px;letter-spacing:.42em;text-transform:uppercase;color:var(--accent);font-weight:600;padding-left:.42em}
+.rule{width:48px;height:2px;background:var(--accent)}
+.who{font-size:24px;font-weight:600;margin:4px 0 0;overflow-wrap:anywhere;text-wrap:balance}
+.ppl{color:var(--muted)}
+.qrbox{background:#fff;border-radius:18px;padding:16px;width:min(290px,100%);aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;color:#111;margin-top:6px}
+.qrbox svg{width:100%;height:auto;display:block}
+.code{font-size:20px;letter-spacing:.3em;font-weight:600;font-variant-numeric:tabular-nums;padding-left:.3em}
+.note{color:var(--muted);font-size:14px;max-width:34ch;margin:0}
+.ok{display:inline-flex;align-items:center;gap:6px;padding:4px 12px;border-radius:999px;background:rgba(116,195,147,.16);color:#8fd3a8;font-size:13px;font-weight:600}
+</style>
+<div id="bg" aria-hidden="true"></div>
+<header><div class="wrap"><h1 class="logo"><img src="../logo.png" alt="El Quincho" width="520" height="121"></h1><div class="place">Villa Ascasubi</div></div></header>
+<main class="wrap tk" id="ticket">
+  <div class="lbl">Invitación</div><div class="rule"></div>
+  <p class="who">Tu entrada a El Quincho</p>
+  <p class="note">Abrí el link que te mandamos por WhatsApp para ver tu código de ingreso.</p>
+</main>
+<script>
+(function(){
+  const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  let lib=null;const load=()=>lib||(lib=new Promise((ok,ko)=>{const x=document.createElement('script');x.src='https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js';x.onload=ok;x.onerror=ko;document.head.appendChild(x)}));
+  function show(){
+    const m=/^#e-(.*)-(\d+)p-([a-z0-9]{8})$/.exec(location.hash||'');if(!m)return;
+    const name=m[1].split('-').filter(Boolean).map(w=>w[0].toUpperCase()+w.slice(1)).join(' '),ppl=+m[2],code=m[3].toUpperCase();
+    document.getElementById('ticket').innerHTML=`<div class="lbl">Invitación confirmada</div><div class="rule"></div><p class="who">${esc(name)}</p><div class="ppl">Válida para ${ppl} ${ppl===1?'persona':'personas'}</div><span class="ok">Entrada paga</span><div class="qrbox" id="qr" aria-label="Código QR de ingreso">Cargando código…</div><div class="code">${esc(code)}</div><p class="note">Mostrá este código en la puerta. Subí el brillo del celular para que se lea mejor.</p>`;
+    load().then(()=>{const q=window.qrcode(0,'M');q.addData('ELQUINCHO-'+code);q.make();document.getElementById('qr').innerHTML=q.createSvgTag({cellSize:8,margin:0,scalable:true})}).catch(()=>{document.getElementById('qr').textContent='No se pudo dibujar el QR. En la puerta alcanza con el código de abajo.'});
+  }
+  window.addEventListener('hashchange',show);show();
+})();
+</script>
+</body></html>

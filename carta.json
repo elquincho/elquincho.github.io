@@ -1,0 +1,325 @@
+{
+"items": [
+{
+"name": "Los Durmientes Malbec",
+"type": "bebida",
+"cat": "Vinos tintos",
+"price": 12000,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 1
+},
+{
+"name": "Latitud 33 Malbec",
+"type": "bebida",
+"cat": "Vinos tintos",
+"price": 15000,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 2
+},
+{
+"name": "Alambrado Malbec",
+"type": "bebida",
+"cat": "Vinos tintos",
+"price": 16000,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 3
+},
+{
+"name": "Nicasia Red Blend Malbec",
+"type": "bebida",
+"cat": "Vinos tintos",
+"price": 20000,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 4
+},
+{
+"name": "Salentein Reserva Malbec",
+"type": "bebida",
+"cat": "Vinos tintos",
+"price": 24000,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 5
+},
+{
+"name": "DV Catena Cabernet Malbec",
+"type": "bebida",
+"cat": "Vinos tintos",
+"price": 28000,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 6
+},
+{
+"name": "Las Perdices Exploración",
+"type": "bebida",
+"cat": "Vinos tintos",
+"price": 32000,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 7
+},
+{
+"name": "El Enemigo Malbec",
+"type": "bebida",
+"cat": "Vinos tintos",
+"price": 38000,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 8
+},
+{
+"name": "Angélica Zapata Malbec",
+"type": "bebida",
+"cat": "Vinos tintos",
+"price": 50000,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 9
+},
+{
+"name": "Catena Zapata Malbec Argentino",
+"type": "bebida",
+"cat": "Vinos tintos",
+"price": 130000,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 10
+},
+{
+"name": "Santa Julia Tardío",
+"type": "bebida",
+"cat": "Vinos blancos",
+"price": 14000,
+"desc": "Dulce",
+"stock": null,
+"on": true,
+"ord": 11
+},
+{
+"name": "Etchart Privado",
+"type": "bebida",
+"cat": "Vinos blancos",
+"price": 11000,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 12
+},
+{
+"name": "Salentein Rosé",
+"type": "bebida",
+"cat": "Espumantes",
+"price": 22000,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 13
+},
+{
+"name": "Salentein Doux",
+"type": "bebida",
+"cat": "Espumantes",
+"price": 22000,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 14
+},
+{
+"name": "Gaseosa 1,5 L",
+"type": "bebida",
+"cat": "Sin alcohol",
+"price": 8000,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 15
+},
+{
+"name": "Agua sin gas",
+"type": "bebida",
+"cat": "Sin alcohol",
+"price": 3000,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 16
+},
+{
+"name": "Agua con gas",
+"type": "bebida",
+"cat": "Sin alcohol",
+"price": 3000,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 17
+},
+{
+"name": "Monster Mango Loco",
+"type": "bebida",
+"cat": "Energizantes",
+"price": 7000,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 18
+},
+{
+"name": "Speed",
+"type": "bebida",
+"cat": "Energizantes",
+"price": 4000,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 19
+},
+{
+"name": "Corona",
+"type": "bebida",
+"cat": "Cervezas",
+"price": 7000,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 20
+},
+{
+"name": "Corona sin alcohol",
+"type": "bebida",
+"cat": "Cervezas",
+"price": 7000,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 21
+},
+{
+"name": "Johnnie Walker Black",
+"type": "bebida",
+"cat": "Whisky",
+"price": 10000,
+"desc": "Medida de 60 ml",
+"stock": null,
+"on": true,
+"ord": 22
+},
+{
+"name": "Combo Fernet",
+"type": "bebida",
+"cat": "Combos",
+"price": 58000,
+"desc": "Fernet + 1 Coca-Cola + jarra de hielo",
+"stock": null,
+"on": true,
+"ord": 25
+},
+{
+"name": "Combo Vodka",
+"type": "bebida",
+"cat": "Combos",
+"price": 48000,
+"desc": "Vodka Skyy + energizante + jarra de hielo",
+"stock": null,
+"on": true,
+"ord": 26
+},
+{
+"name": "Fernet vaso chico",
+"type": "bebida",
+"cat": "Combinadas chicas",
+"price": 7000,
+"desc": "Con gaseosa",
+"stock": null,
+"on": true,
+"ord": 23.1
+},
+{
+"name": "Vodka vaso chico",
+"type": "bebida",
+"cat": "Combinadas chicas",
+"price": 7000,
+"desc": "Con Speed",
+"stock": null,
+"on": true,
+"ord": 23.2
+},
+{
+"name": "Gancia vaso chico",
+"type": "bebida",
+"cat": "Combinadas chicas",
+"price": 7000,
+"desc": "Con gaseosa",
+"stock": null,
+"on": true,
+"ord": 23.3
+},
+{
+"name": "Whisky vaso chico",
+"type": "bebida",
+"cat": "Combinadas chicas",
+"price": 7000,
+"desc": "Con gaseosa",
+"stock": null,
+"on": true,
+"ord": 23.4
+},
+{
+"name": "Fernet copón",
+"type": "bebida",
+"cat": "Combinadas grandes",
+"price": 15000,
+"desc": "Con gaseosa",
+"stock": null,
+"on": true,
+"ord": 24.1
+},
+{
+"name": "Vodka copón",
+"type": "bebida",
+"cat": "Combinadas grandes",
+"price": 15000,
+"desc": "Con Speed",
+"stock": null,
+"on": true,
+"ord": 24.2
+},
+{
+"name": "Gancia copón",
+"type": "bebida",
+"cat": "Combinadas grandes",
+"price": 15000,
+"desc": "Con gaseosa",
+"stock": null,
+"on": true,
+"ord": 24.3
+},
+{
+"name": "Whisky copón",
+"type": "bebida",
+"cat": "Combinadas grandes",
+"price": 15000,
+"desc": "Con gaseosa",
+"stock": null,
+"on": true,
+"ord": 24.4
+}
+],
+"updated": 1794000970824
+}

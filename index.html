@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta property="og:title" content="El Quincho · Carta de bebidas"><meta property="og:description" content="Villa Ascasubi · Precios actualizados">
+<meta property="og:image" content="https://elquincho.github.io/preview-carta.jpg"><meta property="og:url" content="https://elquincho.github.io/"><meta name="theme-color" content="#0c0c0c">
+<link rel="icon" href="logo.png">
+<style>body{margin:0}[hidden]{display:none!important}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
+<title>El Quincho · Carta de bebidas</title>
+</head><body>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@400;600&display=swap">
+<style>
+/* Layout: the printed menu as a phone page — script title, copper spaced section labels, dotted price leaders; sticky tabs to jump between Bebidas / Comidas / Otros. Single dark look on purpose, matching El Quincho's printed menu. */
+:root{--bg:#0c0c0c;--fg:#f6f4f1;--muted:#9a948d;--accent:#d6955a;--line:#2c2a28;--dots:#4a4642;
+  --f-script:"Great Vibes","Snell Roundhand","Apple Chancery",cursive;--f-body:"Open Sans",ui-sans-serif,system-ui,sans-serif;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:16px;line-height:1.35}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.wrap{max-width:620px;margin:0 auto;padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px))}
+header{text-align:center;padding-block:40px 22px}
+.logo{font-family:var(--f-script);font-size:64px;line-height:1;font-weight:400;margin:0}
+.logo img{display:block;margin:0 auto;height:auto;width:min(300px,78%)}
+#bg{position:fixed;inset:0;z-index:-1;background:linear-gradient(rgba(12,12,12,.55),rgba(12,12,12,.92) 45%),url(fondo.jpg) center top/cover no-repeat}
+.place{margin-top:12px;font-size:12px;letter-spacing:.5em;text-transform:uppercase;color:var(--fg);padding-left:.5em}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;justify-content:center;gap:6px;padding-block:8px}
+nav a{padding:7px 14px;border-radius:999px;color:var(--muted);text-decoration:none;font-weight:600;font-size:14px}
+nav a:hover,nav a:focus-visible{color:var(--fg);outline:none;background:#1b1a19}
+.sec{padding-top:26px;scroll-margin-top:calc(54px + env(safe-area-inset-top,0px))}
+.sec h2{font-family:var(--f-script);font-weight:400;font-size:54px;line-height:1.1;text-align:center;margin:8px 0 4px}
+.rule{width:48px;height:2px;background:var(--accent);margin:0 auto 10px}
+.cat{margin:26px 0 10px;font-size:12.5px;font-weight:600;letter-spacing:.32em;text-transform:uppercase;color:var(--accent)}
+.it{margin:0 0 11px}
+.ln{display:flex;align-items:baseline;gap:8px}
+.ln .n{min-width:0;overflow-wrap:anywhere}
+.ln .d{flex:1;min-width:16px;border-bottom:1px dotted var(--dots);transform:translateY(-4px)}
+.ln .p{font-weight:600;white-space:nowrap;font-variant-numeric:tabular-nums}
+.it .x{font-size:13.5px;color:var(--muted);margin-top:1px}
+.it.out .n,.it.out .p{color:var(--muted);text-decoration:line-through}
+.tag{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-left:6px;text-decoration:none;display:inline-block}
+footer{margin-top:40px;padding-block:20px 36px;border-top:1px solid var(--line);text-align:center;color:var(--muted);font-size:12.5px}
+.empty{color:var(--muted);text-align:center;padding:20px 0}
+.tk{min-height:70vh;display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px;padding-block:28px 40px}
+.tk .lbl{font-size:12px;letter-spacing:.42em;text-transform:uppercase;color:var(--accent);font-weight:600;padding-left:.42em}
+.tk h2{font-family:var(--f-script);font-weight:400;font-size:46px;line-height:1.1;margin:0}
+.tk .who{font-size:22px;font-weight:600;margin:0;overflow-wrap:anywhere}
+.tk .ppl{color:var(--muted)}
+.qrbox{background:#fff;border-radius:18px;padding:16px;width:min(300px,100%);aspect-ratio:1/1;display:flex;align-items:center;justify-content:center}
+.qrbox svg{width:100%;height:auto;display:block}
+.tk .code{font-size:20px;letter-spacing:.3em;font-weight:600;font-variant-numeric:tabular-nums;padding-left:.3em}
+.tk .note{color:var(--muted);font-size:14px;max-width:34ch}
+</style>
+<div id="bg" aria-hidden="true"></div>
+<header><div class="wrap"><h1 class="logo"><img src="logo.png" alt="El Quincho" width="520" height="121"></h1><div class="place">Villa Ascasubi</div></div></header>
+<nav aria-label="Secciones de la carta"><div class="wrap" id="tabs"></div></nav>
+<main class="wrap" id="carta"></main>
+<section class="wrap tk" id="ticket" hidden></section>
+<footer><div class="wrap" id="foot">Precios en pesos argentinos.</div></footer>
+<script>
+(async function(){
+  let D={items:[],updated:0};
+  try{D=await (await fetch('carta.json?v='+Date.now(),{cache:'no-store'})).json()}catch(e){}
+  const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const fmt=n=>'$'+Math.round(n||0).toLocaleString('es-AR');
+  const T=[['bebida','Bebidas']]; /* la carta pública muestra solo bebidas */
+  const its=(D.items||[]).filter(i=>i.on!==false).sort((a,b)=>(a.ord??9999)-(b.ord??9999));
+  let tabs='',h='';
+  for(const [k,l] of T){
+    const list=its.filter(i=>(i.type||'otro')===k);if(!list.length)continue;
+    tabs+=`<a href="#${k}">${l}</a>`;
+    h+=`<section class="sec" id="${k}"><h2>${l}</h2><div class="rule"></div>`;
+    const cats=[];list.forEach(i=>{const c=i.cat||'';if(!cats.includes(c))cats.push(c)});
+    for(const c of cats){
+      if(c)h+=`<div class="cat">${esc(c)}</div>`;
+      for(const i of list.filter(x=>(x.cat||'')===c)){
+        const out=typeof i.stock==='number'&&i.stock<=0;
+        h+=`<div class="it${out?' out':''}"><div class="ln"><span class="n">${esc(i.name)}</span>${out?'<span class="tag">Agotado</span>':''}<span class="d"></span><span class="p">${fmt(i.price)}</span></div>${i.desc?`<div class="x">${esc(i.desc)}</div>`:''}</div>`;
+      }
+    }
+    h+=`</section>`;
+  }
+  document.querySelector('nav').hidden=true;
+  document.getElementById('carta').innerHTML=h||'<p class="empty">La carta se está actualizando.</p>';
+  if(D.updated)document.getElementById('foot').textContent='Precios en pesos argentinos · Actualizada el '+new Date(D.updated).toLocaleString('es-AR',{day:'numeric',month:'long',hour:'2-digit',minute:'2-digit',timeZone:'America/Argentina/Cordoba'});
+})();
+</script>
+
+<script>
+(function(){
+  const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  let lib=null;const load=()=>lib||(lib=new Promise((ok,ko)=>{const x=document.createElement('script');x.src='https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js';x.onload=ok;x.onerror=ko;document.head.appendChild(x)}));
+  function show(){
+    const m=/^#e-(.*)-(\d+)p-([a-z0-9]{8})$/.exec(location.hash||'');
+    const tk=document.getElementById('ticket'),parts=['carta','foot'].map(id=>document.getElementById(id));
+    if(!m){tk.hidden=true;parts.forEach(p=>p&&(p.parentNode.hidden=false));document.getElementById('carta').hidden=false;return}
+    document.getElementById('carta').hidden=true;document.querySelector('footer').hidden=true;
+    const name=m[1].split('-').filter(Boolean).map(w=>w[0].toUpperCase()+w.slice(1)).join(' '),ppl=+m[2],code=m[3].toUpperCase();
+    tk.hidden=false;
+    tk.innerHTML=`<div class="lbl">Entrada</div><p class="who">${esc(name)}</p><div class="ppl">Válida para ${ppl} ${ppl===1?'persona':'personas'}</div><div class="qrbox" id="qr" aria-label="Código QR de la entrada"></div><div class="code">${esc(code)}</div><p class="note">Mostrá este código en la puerta. Subí el brillo del celular para que se lea mejor.</p>`;
+    load().then(()=>{const q=window.qrcode(0,'M');q.addData('ELQUINCHO-'+code);q.make();document.getElementById('qr').innerHTML=q.createSvgTag({cellSize:8,margin:0,scalable:true})}).catch(()=>{document.getElementById('qr').innerHTML='<p style="color:#000">No se pudo dibujar el QR. Mostrá el código de abajo.</p>'});
+  }
+  window.addEventListener('hashchange',show);show();
+})();
+</script>
+</body></html>
