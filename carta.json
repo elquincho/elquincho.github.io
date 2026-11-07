@@ -221,26 +221,6 @@
 "ord": 22
 },
 {
-"name": "Combo Fernet",
-"type": "bebida",
-"cat": "Combos",
-"price": 58000,
-"desc": "Fernet + 1 Coca-Cola + jarra de hielo",
-"stock": null,
-"on": true,
-"ord": 25
-},
-{
-"name": "Combo Vodka",
-"type": "bebida",
-"cat": "Combos",
-"price": 48000,
-"desc": "Vodka Skyy + energizante + jarra de hielo",
-"stock": null,
-"on": true,
-"ord": 26
-},
-{
 "name": "Fernet vaso chico",
 "type": "bebida",
 "cat": "Combinadas chicas",
@@ -319,7 +299,157 @@
 "stock": null,
 "on": true,
 "ord": 24.4
+},
+{
+"name": "Combo Fernet",
+"type": "bebida",
+"cat": "Combos",
+"price": 58000,
+"desc": "Fernet + 1 Coca-Cola + jarra de hielo",
+"stock": null,
+"on": true,
+"ord": 25
+},
+{
+"name": "Combo Vodka",
+"type": "bebida",
+"cat": "Combos",
+"price": 48000,
+"desc": "Vodka Skyy + energizante + jarra de hielo",
+"stock": null,
+"on": true,
+"ord": 26
+},
+{
+"name": "Menú de la Casa",
+"type": "comida",
+"cat": "Menú",
+"price": 20000,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 27
+},
+{
+"name": "Rotura de Cristaleria",
+"type": "otro",
+"cat": "Rotura",
+"price": 5000,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 28
+},
+{
+"name": "Servicio de Limpieza",
+"type": "otro",
+"cat": "Limpieza",
+"price": 7000,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 29
+},
+{
+"name": "Carbon y Leña",
+"type": "otro",
+"cat": "Insumos Gastronomia",
+"price": 3500,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 30
+},
+{
+"name": "Menú de Entrada",
+"type": "comida",
+"cat": "Menú",
+"price": 4000,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 31
+},
+{
+"name": "Postre",
+"type": "comida",
+"cat": "Menú",
+"price": 3000,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 32
+},
+{
+"name": "Golosinas y Chocolates",
+"type": "comida",
+"cat": "Menú",
+"price": 3000,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 33
+},
+{
+"name": "Vodka Grey Goose",
+"type": "bebida",
+"cat": "Vodka Alta Gama",
+"price": 180000,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 34
+},
+{
+"name": "Vodka Ciroc",
+"type": "bebida",
+"cat": "Vodka Alta Gama",
+"price": 160000,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 34.01
+},
+{
+"name": "Vodka Belvedere",
+"type": "bebida",
+"cat": "Vodka Alta Gama",
+"price": 200000,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 34.02
+},
+{
+"name": "Champagne Moët",
+"type": "bebida",
+"cat": "Espumantes alta gama",
+"price": 180000,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 35.02
+},
+{
+"name": "Champagne Dom Pérignon",
+"type": "bebida",
+"cat": "Espumantes alta gama",
+"price": 750000,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 35.03
+},
+{
+"name": "Champagne Veuve Clicquot",
+"type": "bebida",
+"cat": "Espumantes alta gama",
+"price": 180000,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 35.04
 }
 ],
-"updated": 1794000970824
+"updated": 1794084036059
 }

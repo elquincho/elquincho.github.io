@@ -61,7 +61,7 @@ footer{margin-top:40px;padding-block:20px 36px;border-top:1px solid var(--line);
   const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const fmt=n=>'$'+Math.round(n||0).toLocaleString('es-AR');
   const T=[['bebida','Bebidas']]; /* la carta pública muestra solo bebidas */
-  const its=(D.items||[]).filter(i=>i.on!==false).sort((a,b)=>(a.ord??9999)-(b.ord??9999));
+  const its0=(D.items||[]).filter(i=>i.on!==false),co={};its0.forEach(i=>{const k=(i.type||'otro')+'|'+(i.cat||'');co[k]=Math.min(co[k]??Infinity,i.ord??9999)});const ck=i=>co[(i.type||'otro')+'|'+(i.cat||'')];const its=its0.sort((a,b)=>ck(a)-ck(b)||String(a.cat||'').localeCompare(String(b.cat||''))||(Number(a.price)||0)-(Number(b.price)||0)||String(a.name).localeCompare(b.name));
   let tabs='',h='';
   for(const [k,l] of T){
     const list=its.filter(i=>(i.type||'otro')===k);if(!list.length)continue;
