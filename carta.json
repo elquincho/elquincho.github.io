@@ -221,6 +221,26 @@
 "ord": 22
 },
 {
+"name": "Combo Fernet",
+"type": "bebida",
+"cat": "Combos",
+"price": 58000,
+"desc": "Fernet + 1 Coca-Cola + jarra de hielo",
+"stock": null,
+"on": true,
+"ord": 25
+},
+{
+"name": "Combo Vodka",
+"type": "bebida",
+"cat": "Combos",
+"price": 48000,
+"desc": "Vodka Skyy + energizante + jarra de hielo",
+"stock": null,
+"on": true,
+"ord": 26
+},
+{
 "name": "Fernet vaso chico",
 "type": "bebida",
 "cat": "Combinadas chicas",
@@ -299,26 +319,6 @@
 "stock": null,
 "on": true,
 "ord": 24.4
-},
-{
-"name": "Combo Fernet",
-"type": "bebida",
-"cat": "Combos",
-"price": 58000,
-"desc": "Fernet + 1 Coca-Cola + jarra de hielo",
-"stock": null,
-"on": true,
-"ord": 25
-},
-{
-"name": "Combo Vodka",
-"type": "bebida",
-"cat": "Combos",
-"price": 48000,
-"desc": "Vodka Skyy + energizante + jarra de hielo",
-"stock": null,
-"on": true,
-"ord": 26
 },
 {
 "name": "Menú de la Casa",
@@ -449,7 +449,177 @@
 "stock": null,
 "on": true,
 "ord": 35.04
+},
+{
+"name": "Espumante Louis Roederer",
+"type": "bebida",
+"cat": "Espumantes alta gama",
+"price": 200000,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 35.05
+},
+{
+"name": "Vino Piattelli Reserva Malbec 750 ml",
+"type": "bebida",
+"cat": "Vinos tintos",
+"price": 22000,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 36.05
+},
+{
+"name": "Cerveza Tirada Chopp",
+"type": "bebida",
+"cat": "Cervezas",
+"price": 8000,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 21.01
+},
+{
+"name": "Whisky The Dalmore (medida)",
+"type": "bebida",
+"cat": "Whisky",
+"price": 45000,
+"desc": "Medida de 60 ml",
+"stock": null,
+"on": true,
+"ord": 22.01
+},
+{
+"name": "Johnnie Walker Blue Label (medida)",
+"type": "bebida",
+"cat": "Whisky",
+"price": 65000,
+"desc": "Medida de 60 ml",
+"stock": null,
+"on": true,
+"ord": 22.02
+},
+{
+"name": "The Macallan 12  Triple Cask (medida)",
+"type": "bebida",
+"cat": "Whisky",
+"price": 45000,
+"desc": "Medida de 60 ml",
+"stock": null,
+"on": true,
+"ord": 22.03
+},
+{
+"name": "The Macallan Aera (medida)",
+"type": "bebida",
+"cat": "Whisky",
+"price": 140000,
+"desc": "Medida de 60 ml",
+"stock": null,
+"on": true,
+"ord": 22.04
+},
+{
+"name": "The Macallan Earth (medida)",
+"type": "bebida",
+"cat": "Whisky",
+"price": 80000,
+"desc": "Medida de 60 ml",
+"stock": null,
+"on": true,
+"ord": 22.05
+},
+{
+"name": "Royal Salute 21 (medida)",
+"type": "bebida",
+"cat": "Whisky",
+"price": 40000,
+"desc": "Medida de 60 ml",
+"stock": null,
+"on": true,
+"ord": 22.06
+},
+{
+"name": "Laphroaig 12 (medida)",
+"type": "bebida",
+"cat": "Whisky",
+"price": 50000,
+"desc": "Medida de 60 ml",
+"stock": null,
+"on": true,
+"ord": 22.07
+},
+{
+"name": "Crown Royal (medida)",
+"type": "bebida",
+"cat": "Whisky",
+"price": 30000,
+"desc": "Medida de 60 ml",
+"stock": null,
+"on": true,
+"ord": 22.08
+},
+{
+"name": "Iwai Tradición ( Japonés ) (medida)",
+"type": "bebida",
+"cat": "Whisky",
+"price": 40000,
+"desc": "Medida de 60 ml",
+"stock": null,
+"on": true,
+"ord": 22.09
+},
+{
+"name": "Elijah Craig (medida)",
+"type": "bebida",
+"cat": "Whisky",
+"price": 22000,
+"desc": "Medida de 60 ml",
+"stock": null,
+"on": true,
+"ord": 22.1
+},
+{
+"name": "Jack Daniels Gentleman (medida)",
+"type": "bebida",
+"cat": "Whisky",
+"price": 20000,
+"desc": "Medida de 60 ml",
+"stock": null,
+"on": true,
+"ord": 22.11
+},
+{
+"name": "Jack Daniels N7 (medida)",
+"type": "bebida",
+"cat": "Whisky",
+"price": 15000,
+"desc": "Medida de 60 ml",
+"stock": null,
+"on": true,
+"ord": 22.12
+},
+{
+"name": "Johnnie Walter Green (medida)",
+"type": "bebida",
+"cat": "Whisky",
+"price": 35000,
+"desc": "Medida de 60 ml",
+"stock": null,
+"on": true,
+"ord": 22.13
+},
+{
+"name": "Johnnie Walker 18 (medida)",
+"type": "bebida",
+"cat": "Whisky",
+"price": 50000,
+"desc": "Medida de 60 ml",
+"stock": null,
+"on": true,
+"ord": 22.14
 }
 ],
-"updated": 1794084036059
+"updated": 1794087668352
 }
