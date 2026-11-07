@@ -93,7 +93,7 @@
 {
 "name": "Catena Zapata Malbec Argentino",
 "type": "bebida",
-"cat": "Vinos tintos",
+"cat": "Vinos de alta gama",
 "price": 130000,
 "desc": "",
 "stock": null,
@@ -119,6 +119,16 @@
 "stock": null,
 "on": true,
 "ord": 12
+},
+{
+"name": "Las Perdices Riesling 750 ml",
+"type": "bebida",
+"cat": "Vinos blancos",
+"price": 35000,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 12.01
 },
 {
 "name": "Salentein Rosé",
@@ -211,6 +221,16 @@
 "ord": 21
 },
 {
+"name": "Cerveza Tirada Chopp",
+"type": "bebida",
+"cat": "Cervezas",
+"price": 8000,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 21.01
+},
+{
 "name": "Johnnie Walker Black",
 "type": "bebida",
 "cat": "Whisky",
@@ -221,24 +241,144 @@
 "ord": 22
 },
 {
-"name": "Combo Fernet",
+"name": "Whisky The Dalmore (medida)",
 "type": "bebida",
-"cat": "Combos",
-"price": 58000,
-"desc": "Fernet + 1 Coca-Cola + jarra de hielo",
+"cat": "Whisky",
+"price": 45000,
+"desc": "Medida de 60 ml",
 "stock": null,
 "on": true,
-"ord": 25
+"ord": 22.01
 },
 {
-"name": "Combo Vodka",
+"name": "Johnnie Walker Blue Label (medida)",
 "type": "bebida",
-"cat": "Combos",
-"price": 48000,
-"desc": "Vodka Skyy + energizante + jarra de hielo",
+"cat": "Whisky",
+"price": 65000,
+"desc": "Medida de 60 ml",
 "stock": null,
 "on": true,
-"ord": 26
+"ord": 22.02
+},
+{
+"name": "The Macallan 12  Triple Cask (medida)",
+"type": "bebida",
+"cat": "Whisky",
+"price": 45000,
+"desc": "Medida de 60 ml",
+"stock": null,
+"on": true,
+"ord": 22.03
+},
+{
+"name": "The Macallan Aera (medida)",
+"type": "bebida",
+"cat": "Whisky",
+"price": 140000,
+"desc": "Medida de 60 ml",
+"stock": null,
+"on": true,
+"ord": 22.04
+},
+{
+"name": "The Macallan Earth (medida)",
+"type": "bebida",
+"cat": "Whisky",
+"price": 80000,
+"desc": "Medida de 60 ml",
+"stock": null,
+"on": true,
+"ord": 22.05
+},
+{
+"name": "Royal Salute 21 (medida)",
+"type": "bebida",
+"cat": "Whisky",
+"price": 40000,
+"desc": "Medida de 60 ml",
+"stock": null,
+"on": true,
+"ord": 22.06
+},
+{
+"name": "Laphroaig 12 (medida)",
+"type": "bebida",
+"cat": "Whisky",
+"price": 50000,
+"desc": "Medida de 60 ml",
+"stock": null,
+"on": true,
+"ord": 22.07
+},
+{
+"name": "Crown Royal (medida)",
+"type": "bebida",
+"cat": "Whisky",
+"price": 30000,
+"desc": "Medida de 60 ml",
+"stock": null,
+"on": true,
+"ord": 22.08
+},
+{
+"name": "Iwai Tradición ( Japonés ) (medida)",
+"type": "bebida",
+"cat": "Whisky",
+"price": 40000,
+"desc": "Medida de 60 ml",
+"stock": null,
+"on": true,
+"ord": 22.09
+},
+{
+"name": "Elijah Craig (medida)",
+"type": "bebida",
+"cat": "Whisky",
+"price": 22000,
+"desc": "Medida de 60 ml",
+"stock": null,
+"on": true,
+"ord": 22.1
+},
+{
+"name": "Jack Daniels Gentleman (medida)",
+"type": "bebida",
+"cat": "Whisky",
+"price": 20000,
+"desc": "Medida de 60 ml",
+"stock": null,
+"on": true,
+"ord": 22.11
+},
+{
+"name": "Jack Daniels N7 (medida)",
+"type": "bebida",
+"cat": "Whisky",
+"price": 15000,
+"desc": "Medida de 60 ml",
+"stock": null,
+"on": true,
+"ord": 22.12
+},
+{
+"name": "Johnnie Walter Green (medida)",
+"type": "bebida",
+"cat": "Whisky",
+"price": 35000,
+"desc": "Medida de 60 ml",
+"stock": null,
+"on": true,
+"ord": 22.13
+},
+{
+"name": "Johnnie Walker 18 (medida)",
+"type": "bebida",
+"cat": "Whisky",
+"price": 50000,
+"desc": "Medida de 60 ml",
+"stock": null,
+"on": true,
+"ord": 22.14
 },
 {
 "name": "Fernet vaso chico",
@@ -319,6 +459,26 @@
 "stock": null,
 "on": true,
 "ord": 24.4
+},
+{
+"name": "Combo Fernet",
+"type": "bebida",
+"cat": "Combos",
+"price": 58000,
+"desc": "Fernet + 1 Coca-Cola + jarra de hielo",
+"stock": null,
+"on": true,
+"ord": 25
+},
+{
+"name": "Combo Vodka",
+"type": "bebida",
+"cat": "Combos",
+"price": 48000,
+"desc": "Vodka Skyy + energizante + jarra de hielo",
+"stock": null,
+"on": true,
+"ord": 26
 },
 {
 "name": "Menú de la Casa",
@@ -471,155 +631,185 @@
 "ord": 36.05
 },
 {
-"name": "Cerveza Tirada Chopp",
+"name": "Vino Tinamú Blend Las Perdices 750 ml",
 "type": "bebida",
-"cat": "Cervezas",
-"price": 8000,
+"cat": "Vinos de alta gama",
+"price": 120000,
 "desc": "",
 "stock": null,
 "on": true,
-"ord": 21.01
+"ord": 36.06
 },
 {
-"name": "Whisky The Dalmore (medida)",
+"name": "Vino Meg Escorihuela Gascón Blend 750 ml",
 "type": "bebida",
-"cat": "Whisky",
-"price": 45000,
-"desc": "Medida de 60 ml",
+"cat": "Vinos de alta gama",
+"price": 100000,
+"desc": "",
 "stock": null,
 "on": true,
-"ord": 22.01
+"ord": 37.07
 },
 {
-"name": "Johnnie Walker Blue Label (medida)",
+"name": "Vino Tinto Piattelli Arlene Blend 750 ml",
 "type": "bebida",
-"cat": "Whisky",
-"price": 65000,
-"desc": "Medida de 60 ml",
+"cat": "Vinos de alta gama",
+"price": 95000,
+"desc": "",
 "stock": null,
 "on": true,
-"ord": 22.02
+"ord": 37.08
 },
 {
-"name": "The Macallan 12  Triple Cask (medida)",
+"name": "Nicolás Catena Zapata 750 ml",
 "type": "bebida",
-"cat": "Whisky",
-"price": 45000,
-"desc": "Medida de 60 ml",
+"cat": "Vinos de alta gama",
+"price": 160000,
+"desc": "",
 "stock": null,
 "on": true,
-"ord": 22.03
+"ord": 37.09
 },
 {
-"name": "The Macallan Aera (medida)",
+"name": "Vino Catena Zapata Birth of Cabernet X 750 ml",
 "type": "bebida",
-"cat": "Whisky",
+"cat": "Vinos de alta gama",
+"price": 130000,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 37.1
+},
+{
+"name": "Trapiche Iscay Malbec Cabernet Franc 750 ml",
+"type": "bebida",
+"cat": "Vinos de alta gama",
 "price": 140000,
-"desc": "Medida de 60 ml",
+"desc": "",
 "stock": null,
 "on": true,
-"ord": 22.04
+"ord": 37.11
 },
 {
-"name": "The Macallan Earth (medida)",
+"name": "Nicola Catena Bonarda 750 ml",
 "type": "bebida",
-"cat": "Whisky",
-"price": 80000,
-"desc": "Medida de 60 ml",
+"cat": "Vinos de alta gama",
+"price": 100000,
+"desc": "",
 "stock": null,
 "on": true,
-"ord": 22.05
+"ord": 37.12
 },
 {
-"name": "Royal Salute 21 (medida)",
+"name": "Caro Malbec-Cabernet 2018 750 ml",
 "type": "bebida",
-"cat": "Whisky",
-"price": 40000,
-"desc": "Medida de 60 ml",
+"cat": "Vinos de alta gama",
+"price": 350000,
+"desc": "",
 "stock": null,
 "on": true,
-"ord": 22.06
+"ord": 37.13
 },
 {
-"name": "Laphroaig 12 (medida)",
+"name": "Vino Viña Cobos Vinculum",
 "type": "bebida",
-"cat": "Whisky",
-"price": 50000,
-"desc": "Medida de 60 ml",
+"cat": "Vinos de alta gama",
+"price": 150000,
+"desc": "",
 "stock": null,
 "on": true,
-"ord": 22.07
+"ord": 37.14
 },
 {
-"name": "Crown Royal (medida)",
+"name": "Vino Salieintein Gran VU",
 "type": "bebida",
-"cat": "Whisky",
-"price": 30000,
-"desc": "Medida de 60 ml",
+"cat": "Vinos de alta gama",
+"price": 180000,
+"desc": "",
 "stock": null,
 "on": true,
-"ord": 22.08
+"ord": 37.15
 },
 {
-"name": "Iwai Tradición ( Japonés ) (medida)",
+"name": "Vino Las Perdices Alae",
 "type": "bebida",
-"cat": "Whisky",
-"price": 40000,
-"desc": "Medida de 60 ml",
+"cat": "Vinos de alta gama",
+"price": 150000,
+"desc": "",
 "stock": null,
 "on": true,
-"ord": 22.09
+"ord": 37.16
 },
 {
-"name": "Elijah Craig (medida)",
+"name": "Vino Teho Gran Cru",
 "type": "bebida",
-"cat": "Whisky",
-"price": 22000,
-"desc": "Medida de 60 ml",
+"cat": "Vinos de alta gama",
+"price": 130000,
+"desc": "",
 "stock": null,
 "on": true,
-"ord": 22.1
+"ord": 37.17
 },
 {
-"name": "Jack Daniels Gentleman (medida)",
+"name": "Vino Zuccardi Aluvional Gualtallary",
 "type": "bebida",
-"cat": "Whisky",
-"price": 20000,
-"desc": "Medida de 60 ml",
+"cat": "Vinos de alta gama",
+"price": 150000,
+"desc": "",
 "stock": null,
 "on": true,
-"ord": 22.11
+"ord": 37.18
 },
 {
-"name": "Jack Daniels N7 (medida)",
+"name": "Vino Estiba Reservada Catena Zapata",
 "type": "bebida",
-"cat": "Whisky",
-"price": 15000,
-"desc": "Medida de 60 ml",
+"cat": "Vinos de alta gama",
+"price": 650000,
+"desc": "",
 "stock": null,
 "on": true,
-"ord": 22.12
+"ord": 37.19
 },
 {
-"name": "Johnnie Walter Green (medida)",
+"name": "Adrianna Vineyard Mundus Bacillus Terrae Malbec",
 "type": "bebida",
-"cat": "Whisky",
-"price": 35000,
-"desc": "Medida de 60 ml",
+"cat": "Vinos de alta gama",
+"price": 700000,
+"desc": "",
 "stock": null,
 "on": true,
-"ord": 22.13
+"ord": 37.2
 },
 {
-"name": "Johnnie Walker 18 (medida)",
+"name": "Maison Pouget Cabernet Reserva De La Corona",
 "type": "bebida",
-"cat": "Whisky",
-"price": 50000,
-"desc": "Medida de 60 ml",
+"cat": "Vinos de alta gama",
+"price": 220000,
+"desc": "",
 "stock": null,
 "on": true,
-"ord": 22.14
+"ord": 37.21
+},
+{
+"name": "Maison Pouget Corte Oro Malbec",
+"type": "bebida",
+"cat": "Vinos de alta gama",
+"price": 500000,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 37.22
+},
+{
+"name": "Vino Rutini Julio Le Parc 750ml",
+"type": "bebida",
+"cat": "Vinos de alta gama",
+"price": 950000,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 37.23
 }
 ],
-"updated": 1794087668352
+"updated": 1794091403242
 }
