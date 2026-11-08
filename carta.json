@@ -274,7 +274,7 @@
 "name": "Vino Piattelli Reserva Malbec 750 ml",
 "type": "bebida",
 "cat": "Vinos tintos",
-"price": 22000,
+"price": 25000,
 "desc": "",
 "stock": null,
 "on": true,
@@ -551,6 +551,16 @@
 "ord": 11.01
 },
 {
+"name": "Champagne Baron B Extra Brut",
+"type": "bebida",
+"cat": "Espumantes",
+"price": 65000,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 11.02
+},
+{
 "name": "Champagne Moët",
 "type": "bebida",
 "cat": "Espumantes alta gama",
@@ -574,7 +584,7 @@
 "name": "Champagne Veuve Clicquot",
 "type": "bebida",
 "cat": "Espumantes alta gama",
-"price": 180000,
+"price": 200000,
 "desc": "",
 "stock": null,
 "on": true,
@@ -584,7 +594,7 @@
 "name": "Espumante Louis Roederer",
 "type": "bebida",
 "cat": "Espumantes alta gama",
-"price": 200000,
+"price": 250000,
 "desc": "",
 "stock": null,
 "on": true,
@@ -812,5 +822,5 @@
 }
 ],
 "wa": "5493571571936",
-"updated": 1794145047619
+"updated": 1794147296049
 }
