@@ -624,7 +624,7 @@
 "name": "Johnnie Walker Blue Label (medida)",
 "type": "bebida",
 "cat": "Whisky",
-"price": 65000,
+"price": 70000,
 "desc": "Medida de 60 ml",
 "stock": null,
 "on": true,
@@ -664,7 +664,7 @@
 "name": "Royal Salute 21 (medida)",
 "type": "bebida",
 "cat": "Whisky",
-"price": 40000,
+"price": 45000,
 "desc": "Medida de 60 ml",
 "stock": null,
 "on": true,
@@ -751,6 +751,26 @@
 "ord": 13.14
 },
 {
+"name": "Whisky Johnnie Walker Xr 21 Años (medida)",
+"type": "bebida",
+"cat": "Whisky",
+"price": 60000,
+"desc": "Medida de 60 ml",
+"stock": null,
+"on": true,
+"ord": 13.15
+},
+{
+"name": "Whisky Glenfiddich 12 Años Single Malt (medida)",
+"type": "bebida",
+"cat": "Whisky",
+"price": 30000,
+"desc": "Medida de 60 ml",
+"stock": null,
+"on": true,
+"ord": 13.16
+},
+{
 "name": "Menú de la Casa",
 "type": "comida",
 "cat": "Menú",
@@ -822,5 +842,5 @@
 }
 ],
 "wa": "5493571571936",
-"updated": 1794147296049
+"updated": 1794170011543
 }
