@@ -47,11 +47,45 @@ footer{margin-top:40px;padding-block:20px 36px;border-top:1px solid var(--line);
 .qrbox svg{width:100%;height:auto;display:block}
 .tk .code{font-size:20px;letter-spacing:.3em;font-weight:600;font-variant-numeric:tabular-nums;padding-left:.3em}
 .tk .note{color:var(--muted);font-size:14px;max-width:34ch}
+
+/* Pedido desde la carta */
+.ln .add{flex:none;width:34px;height:34px;margin:-6px -4px -6px 2px;border-radius:999px;border:1px solid var(--accent);background:transparent;color:var(--accent);font:600 20px/1 var(--f-body);display:inline-flex;align-items:center;justify-content:center;cursor:pointer;align-self:center;position:relative}
+.ln .add:active{background:var(--accent);color:#111}
+.ln .add[data-q]::after{content:attr(data-q);position:absolute;top:-7px;right:-7px;min-width:18px;height:18px;padding:0 4px;border-radius:9px;background:var(--accent);color:#111;font-size:11px;line-height:18px;font-weight:700}
+.hintord{text-align:center;color:var(--muted);font-size:13.5px;margin:14px 0 0}
+.hintord b{color:var(--accent);font-weight:600}
+body.hasbar footer{padding-bottom:110px}
+.obar{position:fixed;left:0;right:0;bottom:0;z-index:20;padding:10px max(14px,env(safe-area-inset-left,0px)) calc(10px + env(safe-area-inset-bottom,0px));background:linear-gradient(transparent,rgba(12,12,12,.95) 30%)}
+.obar button{display:flex;width:100%;max-width:620px;margin:0 auto;align-items:center;justify-content:space-between;gap:10px;min-height:54px;padding:0 18px;border:0;border-radius:14px;background:var(--accent);color:#111;font:600 16px var(--f-body);cursor:pointer}
+.osh{position:fixed;inset:0;z-index:30;display:flex;flex-direction:column;justify-content:flex-end;background:rgba(0,0,0,.6)}
+.osh .pn{background:#151413;border-top:1px solid var(--line);border-radius:18px 18px 0 0;max-height:92vh;overflow:auto;padding:18px max(18px,env(safe-area-inset-left,0px)) calc(18px + env(safe-area-inset-bottom,0px));width:100%;max-width:620px;margin:0 auto}
+.osh h3{margin:0 0 4px;font-size:19px}
+.osh .top{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:8px}
+.osh .x{background:none;border:0;color:var(--muted);font-size:26px;line-height:1;cursor:pointer;padding:4px 8px}
+.orow{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--line)}
+.orow .nm{flex:1;min-width:0;overflow-wrap:anywhere}
+.orow .pr{font-weight:600;white-space:nowrap;font-variant-numeric:tabular-nums}
+.qty{display:flex;align-items:center;gap:6px}
+.qty button{width:32px;height:32px;border-radius:999px;border:1px solid var(--dots);background:transparent;color:var(--fg);font-size:18px;cursor:pointer}
+.qty span{min-width:18px;text-align:center;font-weight:600}
+.otot{display:flex;justify-content:space-between;font-weight:600;font-size:17px;padding:12px 0 4px}
+.ofl{display:flex;flex-direction:column;gap:6px;margin-top:12px}
+.ofl label{font-size:13px;color:var(--muted)}
+.ofl input{min-height:48px;border-radius:12px;border:1px solid var(--dots);background:#0c0c0c;color:var(--fg);padding:0 14px;font:16px var(--f-body)}
+.ofl input:focus{outline:2px solid var(--accent);outline-offset:1px}
+.obtn{display:flex;align-items:center;justify-content:center;box-sizing:border-box;width:100%;margin-top:14px;min-height:52px;padding:8px 14px;border-radius:14px;border:0;background:var(--accent);color:#111;font:600 16px/1.25 var(--f-body);cursor:pointer;text-align:center;text-decoration:none}
+.obtn.sec{background:transparent;color:var(--fg);border:1px solid var(--dots)}
+.onote{color:var(--muted);font-size:13.5px;margin-top:10px;line-height:1.45}
+.oerr{color:#f08a7a;font-size:13.5px;margin-top:8px}
+.oshow{text-align:center;padding:10px 0}
+.oshow .big{font-size:42px;font-weight:600;color:var(--accent)}
 </style>
 <div id="bg" aria-hidden="true"></div>
 <header><div class="wrap"><h1 class="logo"><img src="logo.png" alt="El Quincho" width="520" height="121"></h1><div class="place">Villa Ascasubi</div></div></header>
 <nav aria-label="Secciones de la carta"><div class="wrap" id="tabs"></div></nav>
 <main class="wrap" id="carta"></main>
+<div class="obar" id="obar" hidden><button type="button" id="obar-b"><span id="obar-t"></span><span>Ver pedido ›</span></button></div>
+<div class="osh" id="osh" hidden role="dialog" aria-modal="true" aria-labelledby="osh-h"><div class="pn" id="osh-p"></div></div>
 <section class="wrap tk" id="ticket" hidden></section>
 <footer><div class="wrap" id="foot">Precios en pesos argentinos.</div></footer>
 <script>
@@ -62,7 +96,7 @@ footer{margin-top:40px;padding-block:20px 36px;border-top:1px solid var(--line);
   const fmt=n=>'$'+Math.round(n||0).toLocaleString('es-AR');
   const T=[['bebida','Bebidas']]; /* la carta pública muestra solo bebidas */
   const its0=(D.items||[]).filter(i=>i.on!==false),co={};its0.forEach(i=>{const k=(i.type||'otro')+'|'+(i.cat||'');co[k]=Math.min(co[k]??Infinity,i.ord??9999)});const ck=i=>co[(i.type||'otro')+'|'+(i.cat||'')];const its=its0.sort((a,b)=>ck(a)-ck(b)||String(a.cat||'').localeCompare(String(b.cat||''))||(Number(a.price)||0)-(Number(b.price)||0)||String(a.name).localeCompare(b.name));
-  let tabs='',h='';
+  let tabs='',h='';const BY={};
   for(const [k,l] of T){
     const list=its.filter(i=>(i.type||'otro')===k);if(!list.length)continue;
     tabs+=`<a href="#${k}">${l}</a>`;
@@ -72,13 +106,15 @@ footer{margin-top:40px;padding-block:20px 36px;border-top:1px solid var(--line);
       if(c)h+=`<div class="cat">${esc(c)}</div>`;
       for(const i of list.filter(x=>(x.cat||'')===c)){
         const out=typeof i.stock==='number'&&i.stock<=0;
-        h+=`<div class="it${out?' out':''}"><div class="ln"><span class="n">${esc(i.name)}</span>${out?'<span class="tag">Agotado</span>':''}<span class="d"></span><span class="p">${fmt(i.price)}</span></div>${i.desc?`<div class="x">${esc(i.desc)}</div>`:''}</div>`;
+        const key='k'+Object.keys(BY).length;BY[key]=i;
+        h+=`<div class="it${out?' out':''}"><div class="ln"><span class="n">${esc(i.name)}</span>${out?'<span class="tag">Agotado</span>':''}<span class="d"></span><span class="p">${fmt(i.price)}</span>${out||!(Number(i.price)>0)?'':`<button class="add" type="button" data-k="${key}" aria-label="Agregar ${esc(i.name)} al pedido">+</button>`}</div>${i.desc?`<div class="x">${esc(i.desc)}</div>`:''}</div>`;
       }
     }
     h+=`</section>`;
   }
   document.querySelector('nav').hidden=true;
-  document.getElementById('carta').innerHTML=h||'<p class="empty">La carta se está actualizando.</p>';
+  document.getElementById('carta').innerHTML=h?'<p class="hintord">Tocá <b>+</b> para armar tu pedido y mandarlo desde la mesa.</p>'+h:'<p class="empty">La carta se está actualizando.</p>';
+  initOrder(D,BY,esc,fmt);
   if(D.updated)document.getElementById('foot').textContent='Precios en pesos argentinos · Actualizada el '+new Date(D.updated).toLocaleString('es-AR',{day:'numeric',month:'long',hour:'2-digit',minute:'2-digit',timeZone:'America/Argentina/Cordoba'});
 })();
 </script>
@@ -99,5 +135,64 @@ footer{margin-top:40px;padding-block:20px 36px;border-top:1px solid var(--line);
   }
   window.addEventListener('hashchange',show);show();
 })();
+</script>
+
+<script>
+function initOrder(D,BY,esc,fmt){
+  const WA=String(D.wa||'').replace(/\D/g,'');
+  const ls={get(k){try{return JSON.parse(localStorage.getItem(k)||'null')}catch(_){return null}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(_){}}};
+  const byName={};Object.values(BY).forEach(i=>{byName[i.name]=i});
+  let cart=[];const saved=ls.get('eq-pedido');
+  if(saved&&Date.now()-(saved.at||0)<6*3600e3)cart=(saved.c||[]).filter(x=>byName[x.n]&&x.q>0);
+  let info=ls.get('eq-pedido-info')||{};
+  const qp=new URLSearchParams(location.search);if(qp.get('mesa'))info.mesa=qp.get('mesa').replace(/\D/g,'');
+  const $=id=>document.getElementById(id),bar=$('obar'),sh=$('osh'),pn=$('osh-p');
+  const save=()=>ls.set('eq-pedido',{at:Date.now(),c:cart});
+  const count=()=>cart.reduce((a,x)=>a+x.q,0),total=()=>cart.reduce((a,x)=>a+x.q*(Number(byName[x.n].price)||0),0);
+  function badges(){document.querySelectorAll('.ln .add').forEach(b=>{const i=BY[b.dataset.k],c=cart.find(x=>x.n===i.name);if(c)b.dataset.q=c.q;else delete b.dataset.q})}
+  function paintBar(){const n=count();bar.hidden=!n;document.body.classList.toggle('hasbar',!!n);if(n)$('obar-t').textContent=`${n} ${n===1?'producto':'productos'} · ${fmt(total())}`;badges()}
+  function add(name,d){let c=cart.find(x=>x.n===name);if(!c){if(d<0)return;c={n:name,q:0};cart.push(c)}c.q+=d;if(c.q<=0)cart=cart.filter(x=>x!==c);save();paintBar()}
+  function msg(){const L=['Pedido El Quincho','Mesa: '+info.mesa];if(info.nombre)L.push('Nombre: '+info.nombre);L.push('');
+    cart.forEach(x=>L.push(`${x.q} x ${x.n} - ${fmt(x.q*(Number(byName[x.n].price)||0))}`));L.push('','Total: '+fmt(total()));return L.join('\n')}
+  function open(){sh.hidden=false;document.body.style.overflow='hidden';paint()}
+  function close(){sh.hidden=true;document.body.style.overflow='';paintBar()}
+  function paint(err){
+    if(!cart.length){pn.innerHTML=`<div class="top"><h3 id="osh-h">Tu pedido</h3><button class="x" data-o="close" aria-label="Cerrar">×</button></div><p class="onote">Todavía no agregaste nada. Tocá + en la carta.</p><button class="obtn sec" data-o="close">Volver a la carta</button>`;return}
+    pn.innerHTML=`<div class="top"><h3 id="osh-h">Tu pedido</h3><button class="x" data-o="close" aria-label="Cerrar">×</button></div>
+      ${cart.map((x,j)=>`<div class="orow"><div class="nm">${esc(x.n)}</div><div class="qty"><button data-o="sub" data-j="${j}" aria-label="Quitar uno">−</button><span>${x.q}</span><button data-o="plus" data-j="${j}" aria-label="Agregar uno">+</button></div><div class="pr">${fmt(x.q*(Number(byName[x.n].price)||0))}</div></div>`).join('')}
+      <div class="otot"><span>Total</span><span>${fmt(total())}</span></div>
+      <div class="ofl"><label for="o-mesa">Número de mesa</label><input id="o-mesa" inputmode="numeric" pattern="[0-9]*" autocomplete="off" value="${esc(info.mesa||'')}" placeholder="Ej: 4"></div>
+      <div class="ofl"><label for="o-nom">Tu nombre</label><input id="o-nom" autocomplete="given-name" value="${esc(info.nombre||'')}" placeholder="Para saber a quién llevárselo"></div>
+      ${err?`<div class="oerr" role="alert">${err}</div>`:''}
+      <button class="obtn" data-o="send">${WA?'Enviar pedido por WhatsApp':'Mostrar pedido al mozo'}</button>
+      <p class="onote">La cuenta se paga al final: cuando quieras, pedísela al mozo y te la mandamos por WhatsApp con el link de pago.</p>
+      <button class="obtn sec" data-o="clear">Vaciar pedido</button>`;
+    const m=$('o-mesa'),nm=$('o-nom');
+    m.addEventListener('input',()=>{info.mesa=m.value.replace(/\D/g,'');ls.set('eq-pedido-info',info);const er=pn.querySelector('.oerr');if(er&&info.mesa)er.remove()});
+    nm.addEventListener('input',()=>{info.nombre=nm.value.trim();ls.set('eq-pedido-info',info)});
+  }
+  function sent(){pn.innerHTML=`<div class="top"><h3 id="osh-h">¡Listo!</h3><button class="x" data-o="close" aria-label="Cerrar">×</button></div>
+      <p class="onote" style="font-size:15px;color:var(--fg)">Se abrió WhatsApp con tu pedido: tocá <b>Enviar</b> ahí. En cuanto lo recibimos te lo llevamos a la mesa ${esc(info.mesa)}.</p>
+      <button class="obtn" data-o="again">Ya lo envié · hacer otro pedido</button><a class="obtn sec" href="${'https://wa.me/'+WA+'?text='+encodeURIComponent(msg())}" target="_blank" rel="noopener">No se abrió WhatsApp: probar de nuevo</a>`}
+  function show(){pn.innerHTML=`<div class="top"><h3 id="osh-h">Mostrale esto al mozo</h3><button class="x" data-o="close" aria-label="Cerrar">×</button></div>
+      <div class="oshow"><div>Mesa</div><div class="big">${esc(info.mesa)}</div>${info.nombre?`<div>${esc(info.nombre)}</div>`:''}</div>
+      ${cart.map(x=>`<div class="orow"><div class="nm"><b>${x.q} ×</b> ${esc(x.n)}</div></div>`).join('')}
+      <div class="otot"><span>Total</span><span>${fmt(total())}</span></div>
+      <button class="obtn" data-o="again">Listo · hacer otro pedido</button>`}
+  document.getElementById('carta').addEventListener('click',e=>{const b=e.target.closest('.add');if(!b)return;add(BY[b.dataset.k].name,1);b.animate&&b.animate([{transform:'scale(1.25)'},{transform:'scale(1)'}],{duration:180})});
+  $('obar-b').addEventListener('click',open);
+  sh.addEventListener('click',e=>{if(e.target===sh)return close();const b=e.target.closest('[data-o]');if(!b)return;const o=b.dataset.o,j=+b.dataset.j;
+    if(o==='close')close();
+    else if(o==='plus'){cart[j].q++;save();paint()}
+    else if(o==='sub'){cart[j].q--;if(cart[j].q<=0)cart.splice(j,1);save();paint()}
+    else if(o==='clear'){cart=[];save();close()}
+    else if(o==='again'){cart=[];save();close()}
+    else if(o==='send'){
+      if(!info.mesa){paint('Poné el número de tu mesa (está en la mesa o preguntale al mozo).');$('o-mesa').focus();return}
+      if(WA){window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(msg()),'_blank','noopener');sent()}else show();
+    }});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!sh.hidden)close()});
+  paintBar();
+}
 </script>
 </body></html>
