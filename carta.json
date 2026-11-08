@@ -51,6 +51,16 @@
 "ord": 2.01
 },
 {
+"name": "Red Bull",
+"type": "bebida",
+"cat": "Energizantes",
+"price": 4000,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 2.02
+},
+{
 "name": "Corona",
 "type": "bebida",
 "cat": "Cervezas",
@@ -842,5 +852,5 @@
 }
 ],
 "wa": "5493571571936",
-"updated": 1794170011543
+"updated": 1794178992318
 }
