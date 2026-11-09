@@ -564,7 +564,7 @@
 "name": "Vino Rutini Julio Le Parc 750ml",
 "type": "bebida",
 "cat": "Vinos de alta gama",
-"price": 400000,
+"price": 525000,
 "desc": "",
 "stock": null,
 "on": true,
@@ -1062,5 +1062,5 @@
 }
 ],
 "wa": "5493571571936",
-"updated": 1794264650194
+"updated": 1794268711294
 }
