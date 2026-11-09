@@ -331,6 +331,56 @@
 "ord": 8.02
 },
 {
+"name": "Alma Negra Blanco",
+"type": "bebida",
+"cat": "Vinos blancos",
+"price": 55000,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 8.03
+},
+{
+"name": "Alma Negra Orange ( Rosado )",
+"type": "bebida",
+"cat": "Vinos blancos",
+"price": 58000,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 8.04
+},
+{
+"name": "Catena Zapata DV Chardonnay",
+"type": "bebida",
+"cat": "Vinos blancos",
+"price": 40000,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 8.05
+},
+{
+"name": "Vino El Enemigo Blanco Chardonnay",
+"type": "bebida",
+"cat": "Vinos blancos",
+"price": 40000,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 8.06
+},
+{
+"name": "Vino Pulenta Rose Rosado De Merlot ( Rosado )",
+"type": "bebida",
+"cat": "Vinos blancos",
+"price": 35000,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 8.07
+},
+{
 "name": "Catena Zapata Malbec Argentino",
 "type": "bebida",
 "cat": "Vinos de alta gama",
@@ -1012,5 +1062,5 @@
 }
 ],
 "wa": "5493571571936",
-"updated": 1794255942088
+"updated": 1794256935819
 }
