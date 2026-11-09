@@ -291,6 +291,16 @@
 "ord": 7.09
 },
 {
+"name": "Vino Salentein Numina Malbec",
+"type": "bebida",
+"cat": "Vinos tintos",
+"price": 40000,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 7.1
+},
+{
 "name": "Santa Julia Tardío",
 "type": "bebida",
 "cat": "Vinos blancos",
@@ -539,6 +549,76 @@
 "stock": null,
 "on": true,
 "ord": 9.21
+},
+{
+"name": "Vino Dv Catena Zapata Malbec Malbec",
+"type": "bebida",
+"cat": "Vinos de alta gama",
+"price": 45000,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 9.22
+},
+{
+"name": "Vino Zuccardi Poligonos Gualtallary Malbec",
+"type": "bebida",
+"cat": "Vinos de alta gama",
+"price": 45000,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 9.23
+},
+{
+"name": "Vino Escorihuela Gascon Gran Reserva Malbec",
+"type": "bebida",
+"cat": "Vinos de alta gama",
+"price": 45000,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 9.24
+},
+{
+"name": "Vino Pequeñas Producciones Malbec",
+"type": "bebida",
+"cat": "Vinos de alta gama",
+"price": 45000,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 9.25
+},
+{
+"name": "Vino Tinto Colomé Altura Máxima 1831 Malbec",
+"type": "bebida",
+"cat": "Vinos de alta gama",
+"price": 75000,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 9.26
+},
+{
+"name": "Salentein Primus Malbec",
+"type": "bebida",
+"cat": "Vinos de alta gama",
+"price": 75000,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 9.27
+},
+{
+"name": "Vino Salentein El Tomillo Paraje Altamira",
+"type": "bebida",
+"cat": "Vinos de alta gama",
+"price": 85000,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 9.28
 },
 {
 "name": "Vodka Grey Goose",
@@ -932,5 +1012,5 @@
 }
 ],
 "wa": "5493571571936",
-"updated": 1794253432065
+"updated": 1794255942088
 }
