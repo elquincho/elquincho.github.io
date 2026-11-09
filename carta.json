@@ -273,7 +273,7 @@
 {
 "name": "Angélica Zapata Malbec",
 "type": "bebida",
-"cat": "Vinos tintos",
+"cat": "Vinos de alta gama",
 "price": 50000,
 "desc": "",
 "stock": null,
@@ -344,7 +344,7 @@
 "name": "Vino Meg Escorihuela Gascón Blend 750 ml",
 "type": "bebida",
 "cat": "Vinos de alta gama",
-"price": 100000,
+"price": 110000,
 "desc": "",
 "stock": null,
 "on": true,
@@ -511,6 +511,36 @@
 "ord": 9.18
 },
 {
+"name": "Vino Don Miguel Escorihuela Gascón Malbec",
+"type": "bebida",
+"cat": "Vinos de alta gama",
+"price": 100000,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 9.19
+},
+{
+"name": "Vino argentino Alma Negra",
+"type": "bebida",
+"cat": "Vinos de alta gama",
+"price": 55000,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 9.2
+},
+{
+"name": "Vino Judas Malbec",
+"type": "bebida",
+"cat": "Vinos de alta gama",
+"price": 105000,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 9.21
+},
+{
 "name": "Vodka Grey Goose",
 "type": "bebida",
 "cat": "Vodka Alta Gama",
@@ -539,6 +569,26 @@
 "stock": null,
 "on": true,
 "ord": 10.02
+},
+{
+"name": "Vodka Pravda  Origen Polonia",
+"type": "bebida",
+"cat": "Vodka Alta Gama",
+"price": 130000,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 10.03
+},
+{
+"name": "Vodka Absolut",
+"type": "bebida",
+"cat": "Vodka Alta Gama",
+"price": 45000,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 10.04
 },
 {
 "name": "Salentein Rosé",
@@ -594,7 +644,7 @@
 "name": "Champagne Veuve Clicquot",
 "type": "bebida",
 "cat": "Espumantes alta gama",
-"price": 200000,
+"price": 210000,
 "desc": "",
 "stock": null,
 "on": true,
@@ -609,6 +659,36 @@
 "stock": null,
 "on": true,
 "ord": 12.03
+},
+{
+"name": "Espumante Segura Viudas Heredad Brut",
+"type": "bebida",
+"cat": "Espumantes alta gama",
+"price": 150000,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 12.04
+},
+{
+"name": "Champagne Pommery Reims",
+"type": "bebida",
+"cat": "Espumantes alta gama",
+"price": 200000,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 12.05
+},
+{
+"name": "Espumante Prosecco Brut Bottega",
+"type": "bebida",
+"cat": "Espumantes alta gama",
+"price": 140000,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 12.06
 },
 {
 "name": "Johnnie Walker Black",
@@ -744,7 +824,7 @@
 "name": "Johnnie Walter Green (medida)",
 "type": "bebida",
 "cat": "Whisky",
-"price": 35000,
+"price": 40000,
 "desc": "Medida de 60 ml",
 "stock": null,
 "on": true,
@@ -852,5 +932,5 @@
 }
 ],
 "wa": "5493571571936",
-"updated": 1794178992318
+"updated": 1794253432065
 }
