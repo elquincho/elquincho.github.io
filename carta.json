@@ -181,11 +181,11 @@
 "ord": 6
 },
 {
-"name": "Combo Vodka",
+"name": "Combo Vodka + Energizantes",
 "type": "bebida",
 "cat": "Combos",
 "price": 40000,
-"desc": "Vodka Skyy + energizante + jarra de hielo",
+"desc": "Vodka Skyy / Smirnoff + energizante + jarra de hielo",
 "stock": null,
 "on": true,
 "ord": 6.01
@@ -634,7 +634,7 @@
 "name": "Vino Escorihuela Gascon Gran Reserva Malbec",
 "type": "bebida",
 "cat": "Vinos tintos",
-"price": 26000,
+"price": 23000,
 "desc": "",
 "stock": null,
 "on": true,
@@ -764,7 +764,7 @@
 "name": "Champagne Moët",
 "type": "bebida",
 "cat": "Espumantes alta gama",
-"price": 170000,
+"price": 190000,
 "desc": "",
 "stock": null,
 "on": true,
@@ -784,7 +784,7 @@
 "name": "Champagne Veuve Clicquot",
 "type": "bebida",
 "cat": "Espumantes alta gama",
-"price": 180000,
+"price": 210000,
 "desc": "",
 "stock": null,
 "on": true,
@@ -794,7 +794,7 @@
 "name": "Espumante Louis Roederer",
 "type": "bebida",
 "cat": "Espumantes alta gama",
-"price": 180000,
+"price": 190000,
 "desc": "",
 "stock": null,
 "on": true,
@@ -814,7 +814,7 @@
 "name": "Champagne Pommery Reims",
 "type": "bebida",
 "cat": "Espumantes alta gama",
-"price": 170000,
+"price": 180000,
 "desc": "",
 "stock": null,
 "on": true,
@@ -1069,8 +1069,38 @@
 "stock": null,
 "on": true,
 "ord": 33
+},
+{
+"name": "Aperol Spritz vaso chico",
+"type": "bebida",
+"cat": "Combinadas chicas",
+"price": 7000,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 34
+},
+{
+"name": "Aperol Spritz copón",
+"type": "bebida",
+"cat": "Combinadas grandes",
+"price": 15000,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 35
+},
+{
+"name": "Combo Aperol + Espumantes",
+"type": "bebida",
+"cat": "Combos",
+"price": 40000,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 36
 }
 ],
 "wa": "5493571571936",
-"updated": 1794316699954
+"updated": 1794325421624
 }
