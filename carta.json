@@ -174,7 +174,7 @@
 "name": "Combo Fernet",
 "type": "bebida",
 "cat": "Combos",
-"price": 58000,
+"price": 50000,
 "desc": "Fernet + 1 Coca-Cola + jarra de hielo",
 "stock": null,
 "on": true,
@@ -184,7 +184,7 @@
 "name": "Combo Vodka",
 "type": "bebida",
 "cat": "Combos",
-"price": 48000,
+"price": 40000,
 "desc": "Vodka Skyy + energizante + jarra de hielo",
 "stock": null,
 "on": true,
@@ -633,7 +633,7 @@
 {
 "name": "Vino Escorihuela Gascon Gran Reserva Malbec",
 "type": "bebida",
-"cat": "Vinos de alta gama",
+"cat": "Vinos tintos",
 "price": 26000,
 "desc": "",
 "stock": null,
@@ -831,7 +831,7 @@
 "ord": 12.06
 },
 {
-"name": "Johnnie Walker Black",
+"name": "Johnnie Walker Black (medida)",
 "type": "bebida",
 "cat": "Whisky",
 "price": 10000,
@@ -1072,5 +1072,5 @@
 }
 ],
 "wa": "5493571571936",
-"updated": 1794311602695
+"updated": 1794316699954
 }
