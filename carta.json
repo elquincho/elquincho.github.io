@@ -381,6 +381,16 @@
 "ord": 8.07
 },
 {
+"name": "Vino Bodega Mendel Rosadia ( Rosado )",
+"type": "bebida",
+"cat": "Vinos blancos",
+"price": 70000,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 8.08
+},
+{
 "name": "Catena Zapata Malbec Argentino",
 "type": "bebida",
 "cat": "Vinos de alta gama",
@@ -464,7 +474,7 @@
 "name": "Caro Malbec-Cabernet 2018 750 ml",
 "type": "bebida",
 "cat": "Vinos de alta gama",
-"price": 250000,
+"price": 280000,
 "desc": "",
 "stock": null,
 "on": true,
@@ -1062,5 +1072,5 @@
 }
 ],
 "wa": "5493571571936",
-"updated": 1794268711294
+"updated": 1794311602695
 }
