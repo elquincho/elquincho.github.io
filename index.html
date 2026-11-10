@@ -152,7 +152,7 @@ function initOrder(D,BY,esc,fmt){
   function badges(){document.querySelectorAll('.ln .add').forEach(b=>{const i=BY[b.dataset.k],c=cart.find(x=>x.n===i.name);if(c)b.dataset.q=c.q;else delete b.dataset.q})}
   function paintBar(){const n=count();bar.hidden=!n;document.body.classList.toggle('hasbar',!!n);if(n)$('obar-t').textContent=`${n} ${n===1?'producto':'productos'} · ${fmt(total())}`;badges()}
   function add(name,d){let c=cart.find(x=>x.n===name);if(!c){if(d<0)return;c={n:name,q:0};cart.push(c)}c.q+=d;if(c.q<=0)cart=cart.filter(x=>x!==c);save();paintBar()}
-  function msg(){const L=['Pedido El Quincho','Mesa: '+info.mesa];if(info.nombre)L.push('Nombre: '+info.nombre);L.push('');
+  function msg(){const L=['Pedido El Quincho',info.mesa?'Mesa: '+info.mesa:'Barra (sin mesa)'];if(info.nombre)L.push('Nombre: '+info.nombre);L.push('');
     cart.forEach(x=>L.push(`${x.q} x ${x.n} - ${fmt(x.q*(Number(byName[x.n].price)||0))}`));L.push('','Total: '+fmt(total()));return L.join('\n')}
   function open(){sh.hidden=false;document.body.style.overflow='hidden';paint()}
   function close(){sh.hidden=true;document.body.style.overflow='';paintBar()}
@@ -161,21 +161,21 @@ function initOrder(D,BY,esc,fmt){
     pn.innerHTML=`<div class="top"><h3 id="osh-h">Tu pedido</h3><button class="x" data-o="close" aria-label="Cerrar">×</button></div>
       ${cart.map((x,j)=>`<div class="orow"><div class="nm">${esc(x.n)}</div><div class="qty"><button data-o="sub" data-j="${j}" aria-label="Quitar uno">−</button><span>${x.q}</span><button data-o="plus" data-j="${j}" aria-label="Agregar uno">+</button></div><div class="pr">${fmt(x.q*(Number(byName[x.n].price)||0))}</div></div>`).join('')}
       <div class="otot"><span>Total</span><span>${fmt(total())}</span></div>
-      <div class="ofl"><label for="o-mesa">Número de mesa</label><input id="o-mesa" inputmode="numeric" pattern="[0-9]*" autocomplete="off" value="${esc(info.mesa||'')}" placeholder="Ej: 4"></div>
-      <div class="ofl"><label for="o-nom">Tu nombre</label><input id="o-nom" autocomplete="given-name" value="${esc(info.nombre||'')}" placeholder="Para saber a quién llevárselo"></div>
+      <div class="ofl"><label for="o-mesa">Número de mesa</label><input id="o-mesa" inputmode="numeric" pattern="[0-9]*" autocomplete="off" value="${esc(info.mesa||'')}" placeholder="Si estás en la barra, dejalo vacío"></div>
+      <div class="ofl"><label for="o-nom">Tu nombre</label><input id="o-nom" autocomplete="name" value="${esc(info.nombre||'')}" placeholder="Nombre y apellido"></div>
       ${err?`<div class="oerr" role="alert">${err}</div>`:''}
       <button class="obtn" data-o="send">${WA?'Enviar pedido por WhatsApp':'Mostrar pedido al mozo'}</button>
       <p class="onote">La cuenta se paga al final: cuando quieras, pedísela al mozo y te la mandamos por WhatsApp con el link de pago.</p>
       <button class="obtn sec" data-o="clear">Vaciar pedido</button>`;
     const m=$('o-mesa'),nm=$('o-nom');
-    m.addEventListener('input',()=>{info.mesa=m.value.replace(/\D/g,'');ls.set('eq-pedido-info',info);const er=pn.querySelector('.oerr');if(er&&info.mesa)er.remove()});
+    m.addEventListener('input',()=>{info.mesa=m.value.replace(/\D/g,'');ls.set('eq-pedido-info',info);const er=pn.querySelector('.oerr');if(er&&(info.mesa||info.nombre))er.remove()});
     nm.addEventListener('input',()=>{info.nombre=nm.value.trim();ls.set('eq-pedido-info',info)});
   }
   function sent(){pn.innerHTML=`<div class="top"><h3 id="osh-h">¡Listo!</h3><button class="x" data-o="close" aria-label="Cerrar">×</button></div>
-      <p class="onote" style="font-size:15px;color:var(--fg)">Se abrió WhatsApp con tu pedido: tocá <b>Enviar</b> ahí. En cuanto lo recibimos te lo llevamos a la mesa ${esc(info.mesa)}.</p>
+      <p class="onote" style="font-size:15px;color:var(--fg)">Se abrió WhatsApp con tu pedido: tocá <b>Enviar</b> ahí. ${info.mesa?'En cuanto lo recibimos te lo llevamos a la mesa '+esc(info.mesa)+'.':'Te avisamos en la barra cuando esté listo.'}</p>
       <button class="obtn" data-o="again">Ya lo envié · hacer otro pedido</button><a class="obtn sec" href="${'https://wa.me/'+WA+'?text='+encodeURIComponent(msg())}" target="_blank" rel="noopener">No se abrió WhatsApp: probar de nuevo</a>`}
   function show(){pn.innerHTML=`<div class="top"><h3 id="osh-h">Mostrale esto al mozo</h3><button class="x" data-o="close" aria-label="Cerrar">×</button></div>
-      <div class="oshow"><div>Mesa</div><div class="big">${esc(info.mesa)}</div>${info.nombre?`<div>${esc(info.nombre)}</div>`:''}</div>
+      <div class="oshow">${info.mesa?`<div>Mesa</div><div class="big">${esc(info.mesa)}</div>${info.nombre?`<div>${esc(info.nombre)}</div>`:''}`:`<div>Barra</div><div class="big" style="font-size:30px">${esc(info.nombre)}</div>`}</div>
       ${cart.map(x=>`<div class="orow"><div class="nm"><b>${x.q} ×</b> ${esc(x.n)}</div></div>`).join('')}
       <div class="otot"><span>Total</span><span>${fmt(total())}</span></div>
       <button class="obtn" data-o="again">Listo · hacer otro pedido</button>`}
@@ -188,7 +188,7 @@ function initOrder(D,BY,esc,fmt){
     else if(o==='clear'){cart=[];save();close()}
     else if(o==='again'){cart=[];save();close()}
     else if(o==='send'){
-      if(!info.mesa){paint('Poné el número de tu mesa (está en la mesa o preguntale al mozo).');$('o-mesa').focus();return}
+      if(!info.mesa&&!info.nombre){paint('Poné el número de tu mesa o, si estás en la barra, tu nombre.');$('o-mesa').focus();return}
       if(WA){window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(msg()),'_blank','noopener');sent()}else show();
     }});
   document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!sh.hidden)close()});
