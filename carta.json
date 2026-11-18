@@ -1199,8 +1199,18 @@
 "stock": null,
 "on": true,
 "ord": 46
+},
+{
+"name": "Pancho Clasico",
+"type": "comida",
+"cat": "Menú Quincho",
+"price": 4000,
+"desc": "Salchicha larga en pan tradicional y aderezos a elección",
+"stock": null,
+"on": true,
+"ord": 47
 }
 ],
 "wa": "5493571571936",
-"updated": 1794982196514
+"updated": 1794982454161
 }
