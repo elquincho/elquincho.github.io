@@ -1103,7 +1103,7 @@
 {
 "name": "Hamburguesa El Quincho",
 "type": "comida",
-"cat": "Menú Quincho",
+"cat": "Nuestra Cocina",
 "price": 16000,
 "desc": "Doble hamburguesa, pan brioche, provolone, cebolla caramelizada, panceta y papas fritas",
 "stock": null,
@@ -1113,7 +1113,7 @@
 {
 "name": "Empanadas",
 "type": "comida",
-"cat": "Menú Quincho",
+"cat": "Nuestra Cocina",
 "price": 3000,
 "desc": "Consultar Variedades",
 "stock": null,
@@ -1123,7 +1123,7 @@
 {
 "name": "Tabla de Fiambres",
 "type": "comida",
-"cat": "Menú Quincho",
+"cat": "Nuestra Cocina",
 "price": 10000,
 "desc": "Jamón Crudo , Salame, Lomito Ahumado , Bondiola",
 "stock": null,
@@ -1133,7 +1133,7 @@
 {
 "name": "Tabla de Quesos",
 "type": "comida",
-"cat": "Menú Quincho",
+"cat": "Nuestra Cocina",
 "price": 10000,
 "desc": "Roquefort, Brie, Fontina, Sardo",
 "stock": null,
@@ -1143,7 +1143,7 @@
 {
 "name": "Pizzeta",
 "type": "comida",
-"cat": "Menú Quincho",
+"cat": "Nuestra Cocina",
 "price": 15000,
 "desc": "4 porciones",
 "stock": null,
@@ -1153,7 +1153,7 @@
 {
 "name": "Papas Fritas Simple",
 "type": "comida",
-"cat": "Menú Quincho",
+"cat": "Nuestra Cocina",
 "price": 8000,
 "desc": "",
 "stock": null,
@@ -1163,7 +1163,7 @@
 {
 "name": "Papas Fritas",
 "type": "comida",
-"cat": "Menú Quincho",
+"cat": "Nuestra Cocina",
 "price": 10000,
 "desc": "Con queso cheddar y panceta",
 "stock": null,
@@ -1173,7 +1173,7 @@
 {
 "name": "Sandwich de Ternera Braseada",
 "type": "comida",
-"cat": "Menú Quincho",
+"cat": "Nuestra Cocina",
 "price": 16000,
 "desc": "Ternera braseada durante 4 horas en cerveza negra y vegetales, desmenuzada en su jugo, queso provoleta fundido, mayonesa casera,  pan brioche , acompañada de papas fritas",
 "stock": null,
@@ -1183,7 +1183,7 @@
 {
 "name": "Sandwich de Bondiola",
 "type": "comida",
-"cat": "Menú Quincho",
+"cat": "Nuestra Cocina",
 "price": 16000,
 "desc": "Bondiola de cerdo braseada en miel, mostaza y cerveza, desmenuzada , en pan brioche, acompañada con un dips de barbacoa casera y papas fritas",
 "stock": null,
@@ -1193,7 +1193,7 @@
 {
 "name": "Sandwich de Vacio al Asador",
 "type": "comida",
-"cat": "Menú Quincho",
+"cat": "Nuestra Cocina",
 "price": 16000,
 "desc": "Vacío cocido lentamente hasta deshacerse, desmenuzado con chimichurri de la casa, lechuga y tomate fresco , mayonesa casera en pan artesanal acompañado de papas fritas.",
 "stock": null,
@@ -1203,7 +1203,7 @@
 {
 "name": "Pancho Clasico",
 "type": "comida",
-"cat": "Menú Quincho",
+"cat": "Nuestra Cocina",
 "price": 4000,
 "desc": "Salchicha larga en pan tradicional y aderezos a elección",
 "stock": null,
@@ -1212,5 +1212,5 @@
 }
 ],
 "wa": "5493571571936",
-"updated": 1794982454161
+"updated": 1794982852765
 }

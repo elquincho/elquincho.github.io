@@ -114,7 +114,7 @@ body.hasbar footer{padding-bottom:110px}
     h+=`</section>`;
   }
   document.querySelector('nav').hidden=true;
-  document.getElementById('carta').innerHTML=h?'<p class="hintord">Tocá <b>+</b> para armar tu pedido y mandarlo desde la mesa.</p>'+h+'<p class="xlink"><a href="menu/">Ver el Menú Quincho (comidas) ›</a></p>':'<p class="empty">La carta se está actualizando.</p>';
+  document.getElementById('carta').innerHTML=h?'<p class="hintord">Tocá <b>+</b> para armar tu pedido y mandarlo desde la mesa.</p>'+h+'<p class="xlink"><a href="menu/">Ver Nuestra Cocina (comidas) ›</a></p>':'<p class="empty">La carta se está actualizando.</p>';
   initOrder(D,BY,esc,fmt);
   if(D.updated)document.getElementById('foot').textContent='Precios en pesos argentinos · Actualizada el '+new Date(D.updated).toLocaleString('es-AR',{day:'numeric',month:'long',hour:'2-digit',minute:'2-digit',timeZone:'America/Argentina/Cordoba'});
 })();

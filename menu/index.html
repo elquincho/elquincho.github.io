@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta property="og:title" content="El Quincho · Menú Quincho"><meta property="og:description" content="Villa Ascasubi · Precios actualizados">
+<meta property="og:title" content="El Quincho · Nuestra Cocina"><meta property="og:description" content="Villa Ascasubi · Precios actualizados">
 <meta property="og:image" content="https://elquincho.github.io/preview-carta.jpg"><meta property="og:url" content="https://elquincho.github.io/menu/"><meta name="theme-color" content="#0c0c0c">
 <link rel="icon" href="../logo.png">
 <style>body{margin:0}[hidden]{display:none!important}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
-<title>El Quincho · Menú Quincho</title>
+<title>El Quincho · Nuestra Cocina</title>
 </head><body>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@400;600&display=swap">
 <style>
@@ -95,8 +95,8 @@ body.hasbar footer{padding-bottom:110px}
   try{D=await (await fetch('../carta.json?v='+Date.now(),{cache:'no-store'})).json()}catch(e){}
   const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const fmt=n=>'$'+Math.round(n||0).toLocaleString('es-AR');
-  const T=[['comida','Menú Quincho']]; /* esta página muestra solo el Menú Quincho */
-  const its0=(D.items||[]).filter(i=>i.on!==false&&i.type==='comida'&&String(i.cat||'').trim().toLowerCase()==='menú quincho'),co={};its0.forEach(i=>{const k=(i.type||'otro')+'|'+(i.cat||'');co[k]=Math.min(co[k]??Infinity,i.ord??9999)});const ck=i=>co[(i.type||'otro')+'|'+(i.cat||'')];const its=its0.sort((a,b)=>ck(a)-ck(b)||String(a.cat||'').localeCompare(String(b.cat||''))||(Number(a.price)||0)-(Number(b.price)||0)||String(a.name).localeCompare(b.name));
+  const T=[['comida','Nuestra Cocina']]; /* esta página muestra solo Nuestra Cocina */
+  const its0=(D.items||[]).filter(i=>i.on!==false&&i.type==='comida'&&['nuestra cocina','menú quincho'].includes(String(i.cat||'').trim().toLowerCase())),co={};its0.forEach(i=>{const k=(i.type||'otro')+'|'+(i.cat||'');co[k]=Math.min(co[k]??Infinity,i.ord??9999)});const ck=i=>co[(i.type||'otro')+'|'+(i.cat||'')];const its=its0.sort((a,b)=>ck(a)-ck(b)||String(a.cat||'').localeCompare(String(b.cat||''))||(Number(a.price)||0)-(Number(b.price)||0)||String(a.name).localeCompare(b.name));
   let tabs='',h='';const BY={};
   for(const [k,l] of T){
     const list=its.filter(i=>(i.type||'otro')===k);if(!list.length)continue;
