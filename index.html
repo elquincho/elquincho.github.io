@@ -53,6 +53,7 @@ footer{margin-top:40px;padding-block:20px 36px;border-top:1px solid var(--line);
 .ln .add:active{background:var(--accent);color:#111}
 .ln .add[data-q]::after{content:attr(data-q);position:absolute;top:-7px;right:-7px;min-width:18px;height:18px;padding:0 4px;border-radius:9px;background:var(--accent);color:#111;font-size:11px;line-height:18px;font-weight:700}
 .hintord{text-align:center;color:var(--muted);font-size:13.5px;margin:14px 0 0}
+.xlink{text-align:center;margin:30px 0 10px}.xlink a{display:inline-block;color:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:10px 20px;text-decoration:none;font-weight:600}
 .hintord b{color:var(--accent);font-weight:600}
 body.hasbar footer{padding-bottom:110px}
 .obar{position:fixed;left:0;right:0;bottom:0;z-index:20;padding:10px max(14px,env(safe-area-inset-left,0px)) calc(10px + env(safe-area-inset-bottom,0px));background:linear-gradient(transparent,rgba(12,12,12,.95) 30%)}
@@ -113,7 +114,7 @@ body.hasbar footer{padding-bottom:110px}
     h+=`</section>`;
   }
   document.querySelector('nav').hidden=true;
-  document.getElementById('carta').innerHTML=h?'<p class="hintord">Tocá <b>+</b> para armar tu pedido y mandarlo desde la mesa.</p>'+h:'<p class="empty">La carta se está actualizando.</p>';
+  document.getElementById('carta').innerHTML=h?'<p class="hintord">Tocá <b>+</b> para armar tu pedido y mandarlo desde la mesa.</p>'+h+'<p class="xlink"><a href="menu/">Ver el Menú Quincho (comidas) ›</a></p>':'<p class="empty">La carta se está actualizando.</p>';
   initOrder(D,BY,esc,fmt);
   if(D.updated)document.getElementById('foot').textContent='Precios en pesos argentinos · Actualizada el '+new Date(D.updated).toLocaleString('es-AR',{day:'numeric',month:'long',hour:'2-digit',minute:'2-digit',timeZone:'America/Argentina/Cordoba'});
 })();

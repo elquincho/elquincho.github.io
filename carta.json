@@ -1099,8 +1099,108 @@
 "stock": null,
 "on": true,
 "ord": 36
+},
+{
+"name": "Hamburguesa El Quincho",
+"type": "comida",
+"cat": "Menú Quincho",
+"price": 16000,
+"desc": "Doble hamburguesa, pan brioche, provolone, cebolla caramelizada, panceta y papas fritas",
+"stock": null,
+"on": true,
+"ord": 37
+},
+{
+"name": "Empanadas",
+"type": "comida",
+"cat": "Menú Quincho",
+"price": 3000,
+"desc": "Consultar Variedades",
+"stock": null,
+"on": true,
+"ord": 38
+},
+{
+"name": "Tabla de Fiambres",
+"type": "comida",
+"cat": "Menú Quincho",
+"price": 10000,
+"desc": "Jamón Crudo , Salame, Lomito Ahumado , Bondiola",
+"stock": null,
+"on": true,
+"ord": 39
+},
+{
+"name": "Tabla de Quesos",
+"type": "comida",
+"cat": "Menú Quincho",
+"price": 10000,
+"desc": "Roquefort, Brie, Fontina, Sardo",
+"stock": null,
+"on": true,
+"ord": 40
+},
+{
+"name": "Pizzeta",
+"type": "comida",
+"cat": "Menú Quincho",
+"price": 15000,
+"desc": "4 porciones",
+"stock": null,
+"on": true,
+"ord": 41
+},
+{
+"name": "Papas Fritas Simple",
+"type": "comida",
+"cat": "Menú Quincho",
+"price": 8000,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 42
+},
+{
+"name": "Papas Fritas",
+"type": "comida",
+"cat": "Menú Quincho",
+"price": 10000,
+"desc": "Con queso cheddar y panceta",
+"stock": null,
+"on": true,
+"ord": 43
+},
+{
+"name": "Sandwich de Ternera Braseada",
+"type": "comida",
+"cat": "Menú Quincho",
+"price": 16000,
+"desc": "Ternera braseada durante 4 horas en cerveza negra y vegetales, desmenuzada en su jugo, queso provoleta fundido, mayonesa casera,  pan brioche , acompañada de papas fritas",
+"stock": null,
+"on": true,
+"ord": 44
+},
+{
+"name": "Sandwich de Bondiola",
+"type": "comida",
+"cat": "Menú Quincho",
+"price": 16000,
+"desc": "Bondiola de cerdo braseada en miel, mostaza y cerveza, desmenuzada , en pan brioche, acompañada con un dips de barbacoa casera y papas fritas",
+"stock": null,
+"on": true,
+"ord": 45
+},
+{
+"name": "Sandwich de Vacio al Asador",
+"type": "comida",
+"cat": "Menú Quincho",
+"price": 16000,
+"desc": "Vacío cocido lentamente hasta deshacerse, desmenuzado con chimichurri de la casa, lechuga y tomate fresco , mayonesa casera en pan artesanal acompañado de papas fritas.",
+"stock": null,
+"on": true,
+"ord": 46
 }
 ],
 "wa": "5493571571936",
-"updated": 1794325421624
+"updated": 1794982196514
 }
