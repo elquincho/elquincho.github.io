@@ -1209,8 +1209,18 @@
 "stock": null,
 "on": true,
 "ord": 47
+},
+{
+"name": "Choripan El Quincho",
+"type": "comida",
+"cat": "Nuestra Cocina",
+"price": 10000,
+"desc": "Chorizo parrillero casero, lechuga y tomate fresco, opcional chimichurri de la casa, mayonesa casera y pan artesanal",
+"stock": null,
+"on": true,
+"ord": 48
 }
 ],
 "wa": "5493571571936",
-"updated": 1794982852765
+"updated": 1795100025398
 }
