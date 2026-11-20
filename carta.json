@@ -1121,6 +1121,26 @@
 "ord": 38
 },
 {
+"name": "Papas Fritas",
+"type": "comida",
+"cat": "Nuestra Cocina",
+"price": 10000,
+"desc": "Con queso cheddar y panceta",
+"stock": null,
+"on": true,
+"ord": 38.5
+},
+{
+"name": "Choripan El Quincho",
+"type": "comida",
+"cat": "Nuestra Cocina",
+"price": 10000,
+"desc": "Chorizo parrillero casero, lechuga y tomate fresco, opcional chimichurri de la casa, mayonesa casera y pan artesanal",
+"stock": null,
+"on": true,
+"ord": 38.6
+},
+{
 "name": "Tabla de Fiambres",
 "type": "comida",
 "cat": "Nuestra Cocina",
@@ -1161,16 +1181,6 @@
 "ord": 42
 },
 {
-"name": "Papas Fritas",
-"type": "comida",
-"cat": "Nuestra Cocina",
-"price": 10000,
-"desc": "Con queso cheddar y panceta",
-"stock": null,
-"on": true,
-"ord": 43
-},
-{
 "name": "Sandwich de Ternera Braseada",
 "type": "comida",
 "cat": "Nuestra Cocina",
@@ -1209,18 +1219,8 @@
 "stock": null,
 "on": true,
 "ord": 47
-},
-{
-"name": "Choripan El Quincho",
-"type": "comida",
-"cat": "Nuestra Cocina",
-"price": 10000,
-"desc": "Chorizo parrillero casero, lechuga y tomate fresco, opcional chimichurri de la casa, mayonesa casera y pan artesanal",
-"stock": null,
-"on": true,
-"ord": 48
 }
 ],
 "wa": "5493571571936",
-"updated": 1795100025398
+"updated": 1795136460512
 }
