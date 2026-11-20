@@ -1131,16 +1131,6 @@
 "ord": 38.5
 },
 {
-"name": "Choripan El Quincho",
-"type": "comida",
-"cat": "Nuestra Cocina",
-"price": 10000,
-"desc": "Chorizo parrillero casero, lechuga y tomate fresco, opcional chimichurri de la casa, mayonesa casera y pan artesanal",
-"stock": null,
-"on": true,
-"ord": 38.6
-},
-{
 "name": "Tabla de Fiambres",
 "type": "comida",
 "cat": "Nuestra Cocina",
@@ -1159,6 +1149,16 @@
 "stock": null,
 "on": true,
 "ord": 40
+},
+{
+"name": "Choripan El Quincho",
+"type": "comida",
+"cat": "Nuestra Cocina",
+"price": 10000,
+"desc": "Chorizo parrillero casero, lechuga y tomate fresco, opcional chimichurri de la casa, mayonesa casera y pan artesanal",
+"stock": null,
+"on": true,
+"ord": 40.5
 },
 {
 "name": "Pizzeta",
@@ -1222,5 +1222,5 @@
 }
 ],
 "wa": "5493571571936",
-"updated": 1795136460512
+"updated": 1795136512720
 }
