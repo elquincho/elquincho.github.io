@@ -1219,8 +1219,18 @@
 "stock": null,
 "on": true,
 "ord": 47
+},
+{
+"name": "Hielo",
+"type": "otro",
+"cat": "",
+"price": 4500,
+"desc": "",
+"stock": null,
+"on": true,
+"ord": 48
 }
 ],
 "wa": "5493571571936",
-"updated": 1795136512720
+"updated": 1795379591374
 }
